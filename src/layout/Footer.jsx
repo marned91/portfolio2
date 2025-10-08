@@ -1,4 +1,4 @@
-import Logo from '../assets/portfolioLogoWhite.png';
+import LogoFooter from '../assets/portfolioLogoWhite.png';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export function Footer() {
@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6 md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-8">
           <a href="/" className="shrink-0" aria-label="Home">
             <img
-              src={Logo}
+              src={LogoFooter}
               alt="Portfolio logo"
               className="h-8 w-auto md:h-7"
             />
