@@ -27,7 +27,7 @@ export default function Header() {
               <NavLink
                 to="/"
                 aria-label="Home"
-                className="flex items-center p-2 transition duration-300 ease-out hover:scale-105"
+                className="flex items-center p-2 transition duration-300 ease-out hover:scale-120"
               >
                 <FaHome className="text-dark text-2xl" aria-hidden="true" />
               </NavLink>

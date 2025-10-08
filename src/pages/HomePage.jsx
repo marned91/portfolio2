@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import HomeImage from '../assets/portfolioHome.png';
 import BlubImage from '../assets/BlubScreenshot.png';
 import CartImage from '../assets/CartScreenshot.png';
@@ -21,17 +22,17 @@ export function HomePage() {
           </h1>
         </div>
       </section>
-      <section className="pb-5">
-        <h2 className="font-medium font-medium-small text-dark text-2xl pl-14 pt-8">
+      <section className="pb-10">
+        <h2 className="font-bold font-medium-small text-dark text-2xl pl-14 pt-8">
           Highlighted Assignments
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 w-[95%] mx-auto pt-5">
-          <div className="rounded-md border border-dark/40 p-5">
+          <div className="rounded-lg border border-dark/40 p-5 shadow-xl flex flex-col justify-between">
             <img
               src={BlubImage}
               alt="Screenshot of BLUB project, a social post webpage"
             />
-            <h3 className="font-medium-small text-dark text-xl py-2">
+            <h3 className="font-medium-small font-semibold text-dark text-xl py-2">
               BLUB Project
             </h3>
             <p className="font-text text-black/70 text-sm">
@@ -40,13 +41,18 @@ export function HomePage() {
               create posts, search, and manage their profiles while enjoying a
               consistent and user-friendly interface.
             </p>
+            <Link to="/BLUB">
+              <button className="py-2 px-4 bg-buttons text-white mt-4 font-sm font-light font-buttons-nav rounded-md transition duration-300 ease-out hover:scale-105">
+                View Project
+              </button>
+            </Link>
           </div>
-          <div className="rounded-md border border-dark/40 p-5">
+          <div className="rounded-lg border border-dark/40 p-5 shadow-xl flex flex-col justify-between">
             <img
               src={ReuzeImage}
               alt="Screenshot of ReUze project, an auction webpage"
             />
-            <h3 className="font-medium-small text-dark text-xl py-2">
+            <h3 className="font-medium-small font-semibold text-dark text-xl py-2">
               ReUze Project
             </h3>
             <p className="font-text text-black/70 text-sm">
@@ -55,10 +61,15 @@ export function HomePage() {
               all while promoting sustainability and reuse. Built with HTML,
               CSS, and JavaScript and integrated with a real API.
             </p>
+            <Link to="/ReUze">
+              <button className="py-2 px-4 bg-buttons text-white mt-4 font-sm  font-light font-buttons-nav rounded-md transition duration-300 ease-out hover:scale-105">
+                View Project
+              </button>
+            </Link>
           </div>
-          <div className="rounded-md border border-dark/40 p-5">
+          <div className="rounded-lg border border-dark/40 p-5 shadow-xl flex flex-col justify-between">
             <img src={CartImage} alt="Screenshot of CART project, a webshop" />
-            <h3 className="font-medium-small text-dark text-xl py-2">
+            <h3 className="font-medium-small font-semibold text-dark text-xl py-2">
               CART Project
             </h3>
             <p className="font-text text-black/70 text-sm">
@@ -67,6 +78,11 @@ export function HomePage() {
               checkout, and submit a contact form. Features include global state
               management with Zustand and full API integration.
             </p>
+            <Link to="/CART">
+              <button className="py-2 px-4 bg-buttons text-white mt-4 font-sm font-light font-buttons-nav rounded-md transition duration-300 ease-out hover:scale-105">
+                View Project
+              </button>
+            </Link>
           </div>
         </div>
       </section>
