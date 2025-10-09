@@ -40,7 +40,7 @@ export function CssFrameWorksPage() {
                 href="https://github.com/marned91/CSS-Frameworks/blob/main/README.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit me on GitHub"
+                aria-label="View project on GitHub"
                 className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
               >
                 <FaGithub className="text-[25px] md:text-[30px]" />
@@ -87,7 +87,7 @@ export function CssFrameWorksPage() {
                   Technologies
                 </h2>
                 <p className="text-gray-700 text-md">
-                  HTML, Tailwind CSS, JavaScript, Vite, Netlify, GitHub
+                  HTML, Tailwind, JavaScript, Vite, Netlify, API integration
                 </p>
               </div>
             </div>

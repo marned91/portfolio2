@@ -40,7 +40,7 @@ export function Js2Page() {
                 href="https://github.com/marned91/javascript-framework-ca/blob/main/README.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit me on GitHub"
+                aria-label="View project on GitHub"
                 className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
               >
                 <FaGithub className="text-[25px] md:text-[30px]" />
@@ -89,8 +89,8 @@ export function Js2Page() {
                   Technologies
                 </h2>
                 <p className="text-gray-700 text-md">
-                  React, TypeScript, Vite, Tailwind CSS, Zustand, React Router,
-                  ESLint, Prettier, JSDoc, Netlify
+                  React, TypeScript, Vite, Tailwind, Zustand, React Router, API
+                  integration, JSDoc, Netlify
                 </p>
               </div>
             </div>

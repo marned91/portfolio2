@@ -15,7 +15,7 @@ export default function ImageGallery({
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="rounded-lg shadow-xl overflow-hidden w-full border border-gray-100">
+      <div className="rounded-lg shadow-xl overflow-hidden w-full border border-gray-300">
         <img
           src={selectedImage}
           alt="Project screenshot"
