@@ -18,7 +18,7 @@ export function Footer() {
           <p className="order-3 text-center text-xs opacity-90 md:order-none md:text-sm md:justify-self-center">
             &copy; {year} Marte N. All rights reserved.
           </p>
-          <div className="order-2 flex items-center gap-3 md:order-none">
+          <div className="order-2 flex items-center gap-4 md:order-none">
             <a
               href="https://www.linkedin.com/in/marte-n-18aab5101/"
               target="_blank"

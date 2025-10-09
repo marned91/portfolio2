@@ -13,7 +13,7 @@ export function HomePage() {
           alt="Green leafs on an offwhite background"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-start justify-center gap-6 px-6 pl-5 md:pl-10">
+        <div className="absolute inset-0 flex flex-col items-start justify-center gap-6 px-6 pl-5 md:pl-30">
           <h1 className="font-large bg-black/60 text-white text-xl md:text-3xl font-medium px-5 md:px-10 py-3 rounded-sm shadow ml-1 2xl:ml-30">
             My Portfolio
           </h1>
@@ -36,14 +36,12 @@ export function HomePage() {
               BLUB Project
             </h3>
             <p className="font-text text-black/70 text-sm">
-              A social media front-end app enhanced with Tailwind CSS for a
-              clean, responsive, and accessible design. Users can register,
-              create posts, search, and manage their profiles while enjoying a
-              consistent and user-friendly interface.
+              A social media app rebuilt with Tailwind CSS for a clean,
+              responsive, and accessible user experience.
             </p>
             <Link to="/BLUB">
               <button className="py-2 px-4 bg-buttons text-white mt-4 font-sm font-light font-buttons-nav rounded-md transition duration-300 ease-out hover:scale-105">
-                View Project
+                Read more
               </button>
             </Link>
           </div>
@@ -56,14 +54,12 @@ export function HomePage() {
               ReUze Project
             </h3>
             <p className="font-text text-black/70 text-sm">
-              A responsive auction platform for buying and selling second-hand
-              items. Users can browse listings, place bids, and manage profiles,
-              all while promoting sustainability and reuse. Built with HTML,
-              CSS, and JavaScript and integrated with a real API.
+              A responsive auction site for buying and selling second-hand
+              items, promoting sustainability and reuse.
             </p>
             <Link to="/ReUze">
               <button className="py-2 px-4 bg-buttons text-white mt-4 font-sm  font-light font-buttons-nav rounded-md transition duration-300 ease-out hover:scale-105">
-                View Project
+                Read more
               </button>
             </Link>
           </div>
@@ -73,14 +69,12 @@ export function HomePage() {
               CART Project
             </h3>
             <p className="font-text text-black/70 text-sm">
-              A dynamic e-commerce store built with React, Vite, and Tailwind
-              CSS. Users can browse products, manage a shopping cart, complete
-              checkout, and submit a contact form. Features include global state
-              management with Zustand and full API integration.
+              A modern e-commerce store built with React and Tailwind CSS,
+              featuring cart, checkout, and API integration.
             </p>
             <Link to="/CART">
               <button className="py-2 px-4 bg-buttons text-white mt-4 font-sm font-light font-buttons-nav rounded-md transition duration-300 ease-out hover:scale-105">
-                View Project
+                Read more
               </button>
             </Link>
           </div>
