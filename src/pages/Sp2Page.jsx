@@ -89,10 +89,23 @@ export function Sp2Page() {
                 <h2 className="text-xl font-semibold text-dark mb-2">
                   Technologies
                 </h2>
-                <p className="text-gray-700 text-md">
-                  HTML, Tailwind, JavaScript, Vite, GitHub, API integration,
-                  Netlify
-                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    'HTML',
+                    'Tailwind',
+                    'JavaScript',
+                    'Vite',
+                    'API integration',
+                    'Netlify',
+                  ].map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-tags text-white rounded-full px-3 py-1 text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

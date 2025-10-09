@@ -89,6 +89,23 @@ export function CssFrameWorksPage() {
                 <p className="text-gray-700 text-md">
                   HTML, Tailwind, JavaScript, Vite, Netlify, API integration
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    'HTML',
+                    'Tailwind',
+                    'JavaScript',
+                    'Vite',
+                    'API integration',
+                    'Netlify',
+                  ].map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-tags text-white rounded-full px-3 py-1 text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
