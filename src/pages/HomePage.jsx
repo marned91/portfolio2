@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import HomeImage from '../assets/portfolioHome.png';
-import BlubImage from '../assets/BlubScreenshot.png';
-import CartImage from '../assets/CartScreenshot.png';
-import ReuzeImage from '../assets/ReuzeScreenshot.png';
+import BlubImage from '../assets/blubScreenshot.png';
+import CartImage from '../assets/cartScreenshot.png';
+import ReuzeImage from '../assets/reuzeScreenshot.png';
 
 export function HomePage() {
   return (
