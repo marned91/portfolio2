@@ -31,13 +31,13 @@ export function CssFrameWorksPage() {
               thumbHeightXs={44}
             />
           </div>
-          <div className="flex flex-col gap-6 min-w-0 pt-3">
+          <div className="flex flex-col gap-6 min-w-0">
             <div className="flex md:items-center items-start gap-4">
               <h1 className="text-2xl md:text-4xl font-bold text-main">
                 CSS Frameworks Project
               </h1>
               <a
-                href="https://github.com/marned91"
+                href="https://github.com/marned91/CSS-Frameworks/blob/main/README.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit me on GitHub"
