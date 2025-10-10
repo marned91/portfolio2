@@ -58,7 +58,7 @@ This portfolio website is designed for potential employers, clients, or anyone i
 To get the project running on your local machine, follow these steps:
 
 ### Clone the repository:
-```git clone https://github.com/marned91/ReUze-SP2```
+```git clone https://github.com/marned91/portfolio2```
 
 ### Install Dependencies:
 ```npm install```
