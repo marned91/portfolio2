@@ -19,16 +19,16 @@ export function CssFrameWorksPage() {
   const images = [BlubImage1, BlubImage2, BlubImage3, BlubImage4];
 
   return (
-    <section className="bg-gradient-to-r from-gray-100 to-gray-400 py-10 w-full">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-xl shadow-lg p-6 md:p-10 grid lg:grid-cols-2 gap-8 items-start">
+    <section className="bg-gradient-to-r from-gray-100 to-gray-400 py-5 md:py-10 w-full">
+      <div className="max-w-7xl mx-auto px-2 md:px-6">
+        <div className="bg-white rounded-xl shadow-lg p-4 md:p-10 grid lg:grid-cols-2 gap-8 items-start">
           <div className="w-full max-w-[720px] mx-auto">
             <ImageGallery
               images={images}
               mainHeight={350}
               thumbHeight={80}
-              thumbHeightSm={56}
-              thumbHeightXs={44}
+              thumbHeightSm={64}
+              thumbHeightXs={48}
             />
           </div>
           <div className="flex flex-col gap-6 min-w-0">
@@ -86,9 +86,6 @@ export function CssFrameWorksPage() {
                 <h2 className="text-xl font-semibold text-dark mb-2">
                   Technologies
                 </h2>
-                <p className="text-gray-700 text-md">
-                  HTML, Tailwind, JavaScript, Vite, Netlify, API integration
-                </p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     'HTML',
