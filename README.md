@@ -90,3 +90,4 @@ Thank you for your understanding!
 - Google Fonts. https://fonts.google.com/
 - React-Icons. https://react-icons.github.io/react-icons/
 - Tailwind Docs. https://tailwindcss.com/docs/installation/using-vite
+- Image compressor. https://imagecompressor.com/
