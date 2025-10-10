@@ -32,32 +32,35 @@ export function Sp2Page() {
             />
           </div>
           <div className="flex flex-col gap-6 min-w-0">
-            <div className="flex md:items-center items-start gap-4">
+            <div className="flex flex-wrap md:flex-nowrap items-center gap-4">
               <h1 className="text-2xl md:text-4xl font-bold text-main">
                 JS Framework Project
               </h1>
-              <a
-                href="https://github.com/marned91/ReUze-SP2/blob/main/README.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View project on GitHub"
-                className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
-              >
-                <FaGithub className="text-[25px] md:text-[30px]" />
-              </a>
-              <button
-                onClick={handleCopyLink}
-                aria-label="Copy link to clipboard"
-                className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
-              >
-                <FaShareSquare className="text-[25px] md:text-[30px]" />
-              </button>
+              <div className="flex gap-2 justify-center items-center">
+                <a
+                  href="https://github.com/marned91/ReUze-SP2/blob/main/README.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View project on GitHub"
+                  className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
+                >
+                  <FaGithub className="text-[20px]" />
+                </a>
+                <button
+                  onClick={handleCopyLink}
+                  aria-label="Copy link to clipboard"
+                  className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
+                >
+                  <FaShareSquare className="text-[20px]" />
+                </button>
+              </div>
             </div>
             <Toast
               message="Copied!"
               show={copied}
               onClose={() => setCopied(false)}
             />
+            <div className="h-px bg-gray-300 w-full" />
             <div className="space-y-5">
               <div>
                 <h2 className="text-xl font-semibold text-dark mb-2">
@@ -86,7 +89,7 @@ export function Sp2Page() {
                 </ul>
               </div>
               <div>
-                <h2 className="text-xl font-semibold text-dark mb-2">
+                <h2 className="text-xl font-semibold text-dark mb-3">
                   Technologies
                 </h2>
                 <div className="flex flex-wrap gap-2">

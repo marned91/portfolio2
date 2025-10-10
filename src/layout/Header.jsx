@@ -16,7 +16,7 @@ export default function Header() {
   const linkBase = 'text-dark px-3 py-1';
 
   return (
-    <header className="w-[95%] mx-auto bg-white border-b border-black/50">
+    <header className="w-full mx-auto bg-white border-b border-black/30">
       <div className="hidden md:flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
         <Link to="/" className="flex items-center" aria-label="Home">
           <img src={LogoHeader} alt="Portfolio logo" className="h-8 w-auto" />
