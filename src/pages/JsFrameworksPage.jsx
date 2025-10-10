@@ -3,11 +3,11 @@ import CartImage1 from '../assets/cartScreenshot.png';
 import CartImage2 from '../assets/cartViewProduct.png';
 import CartImage3 from '../assets/cartCheckout.png';
 import CartImage4 from '../assets/cartCart.png';
-import { FaGithub, FaShareSquare } from 'react-icons/fa';
+import { FaGithub, FaShareAlt, FaExternalLinkAlt } from 'react-icons/fa';
 import Toast from '../components/toast';
 import ImageGallery from '../components/ImageGallery';
 
-export function Js2Page() {
+export function JsFrameworksPage() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyLink = () => {
@@ -31,7 +31,7 @@ export function Js2Page() {
               thumbHeightXs={48}
             />
           </div>
-          <div className="flex flex-col gap-6 min-w-0">
+          <div className="flex flex-col gap-3 min-w-0">
             <div className="flex flex-wrap md:flex-nowrap items-center gap-4">
               <h1 className="text-2xl md:text-4xl font-bold text-main">
                 JS Framework Project
@@ -51,12 +51,23 @@ export function Js2Page() {
                   aria-label="Copy link to clipboard"
                   className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
                 >
-                  <FaShareSquare className="text-[20px]" />
+                  <FaShareAlt className="text-[20px]" />
                 </button>
               </div>
             </div>
+            <div className="flex items-center gap-1">
+              <FaExternalLinkAlt className="text-gray-600 text-[14px]" />
+              <a
+                href="https://cart-js-framework.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 text-sm hover:text-gray-700 transition"
+              >
+                Open live site
+              </a>
+            </div>
             <Toast
-              message="Copied!"
+              message="Link copied!"
               show={copied}
               onClose={() => setCopied(false)}
             />
@@ -98,9 +109,7 @@ export function Js2Page() {
                     'Vite',
                     'Tailwind',
                     'Zustand',
-                    'React Router',
                     'API integration',
-                    'Netlify',
                   ].map((tech, idx) => (
                     <span
                       key={idx}

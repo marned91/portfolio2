@@ -3,7 +3,7 @@ import ReuzeImage1 from '../assets/reuzeScreenshot.png';
 import ReuzeImage2 from '../assets/reuzeProfile.png';
 import ReuzeImage3 from '../assets/reuzeCategories.png';
 import ReuzeImage4 from '../assets/reuzeViewItem.png';
-import { FaGithub, FaShareSquare } from 'react-icons/fa';
+import { FaGithub, FaShareAlt, FaExternalLinkAlt } from 'react-icons/fa';
 import Toast from '../components/toast';
 import ImageGallery from '../components/ImageGallery';
 
@@ -31,7 +31,7 @@ export function Sp2Page() {
               thumbHeightXs={48}
             />
           </div>
-          <div className="flex flex-col gap-6 min-w-0">
+          <div className="flex flex-col gap-3 min-w-0">
             <div className="flex flex-wrap md:flex-nowrap items-center gap-4">
               <h1 className="text-2xl md:text-4xl font-bold text-main">
                 JS Framework Project
@@ -51,12 +51,23 @@ export function Sp2Page() {
                   aria-label="Copy link to clipboard"
                   className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
                 >
-                  <FaShareSquare className="text-[20px]" />
+                  <FaShareAlt className="text-[20px]" />
                 </button>
               </div>
             </div>
+            <div className="flex items-center gap-1">
+              <FaExternalLinkAlt className="text-gray-600 text-[14px]" />
+              <a
+                href="https://reuze.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 text-sm hover:text-gray-700 transition"
+              >
+                Open live site
+              </a>
+            </div>
             <Toast
-              message="Copied!"
+              message="Link copied!"
               show={copied}
               onClose={() => setCopied(false)}
             />
@@ -99,7 +110,6 @@ export function Sp2Page() {
                     'JavaScript',
                     'Vite',
                     'API integration',
-                    'Netlify',
                   ].map((tech, idx) => (
                     <span
                       key={idx}
