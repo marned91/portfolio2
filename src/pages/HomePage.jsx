@@ -50,7 +50,7 @@ export function HomePage() {
         </div>
       </section>
       <section className="pb-10">
-        <h2 className="font-bold text-dark text-2xl pl-5 lg:pl-14 pt-8">
+        <h2 className="font-bold text-dark text-2xl pl-5 lg:pl-12 pt-8">
           Highlighted Assignments
         </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 w-[95%] mx-auto pt-5">
