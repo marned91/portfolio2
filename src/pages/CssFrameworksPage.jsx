@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import BlubImage1 from '../assets/BlubScreenshot.png';
+import BlubImage1 from '../assets/blubScreenshot.png';
 import BlubImage2 from '../assets/blubFeed.png';
 import BlubImage3 from '../assets/blubLogin.png';
 import BlubImage4 from '../assets/blubReadPost.png';
