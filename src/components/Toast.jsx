@@ -1,5 +1,22 @@
 import { useEffect } from 'react';
 
+/**
+ * Toast component
+ *
+ * A small centered toast notification that automatically hides after a duration.
+ * When `show` becomes true, a timer is started which calls `onClose` after
+ * `duration` milliseconds. Timer is cleaned up if the component unmounts or
+ * `show` changes.
+ *
+ * Props:
+ * @param {Object} props
+ * @param {string} props.message - Text to display inside the toast.
+ * @param {boolean} props.show - Whether the toast is visible.
+ * @param {() => void} props.onClose - Callback invoked when the toast should hide.
+ * @param {number} [props.duration=2000] - Time in milliseconds before auto-hide.
+ *
+ * @returns {JSX.Element|null} The toast node when `show` is true, otherwise null.
+ */
 export default function Toast({ message, show, onClose, duration = 2000 }) {
   useEffect(() => {
     if (show) {

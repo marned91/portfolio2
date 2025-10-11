@@ -4,6 +4,28 @@ import CopyLinkButton from './CopyLinkButton';
 import ImageGallery from './ImageGallery';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
+/**
+ * ProjectPage component
+ *
+ * Reusable layout for individual project pages (BLUB, CART, ReUze).
+ * Keeps the same structure and styling as your current pages:
+ * - left column: ImageGallery
+ * - right column: title, GitHub link, copy-link button, live site link
+ * - overview, features list and technologies tags
+ *
+ * Props:
+ * @param {Object} props
+ * @param {string} props.title - Visible page title (e.g. "CSS Frameworks Project").
+ * @param {string} props.githubLink - URL to the project's GitHub README or repository.
+ * @param {string} props.liveLink - URL to the live demo site.
+ * @param {string} props.projectHash - Short identifier used by CopyLinkButton to build a hash-link (e.g. "BLUB").
+ * @param {Array<string|import('*.png')>} props.images - Array of image imports/URLs for the ImageGallery.
+ * @param {string} props.overview - Short overview paragraph for the project.
+ * @param {string[]} props.features - List of bullet-point features.
+ * @param {string[]} props.technologies - Array of technology names to render as tags.
+ *
+ * @returns {JSX.Element} A fully styled project page section.
+ */
 export default function ProjectPage({
   title,
   githubLink,

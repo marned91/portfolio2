@@ -4,6 +4,18 @@ import CartImage3 from '../assets/cartCheckout.png';
 import CartImage4 from '../assets/cartCart.png';
 import ProjectPage from '../components/ProjectPage';
 
+/**
+ * JsFrameworksPage component
+ *
+ * Wrapper page for the JS Frameworks project (CART).
+ * Uses ProjectPage to render:
+ * - Image gallery of project screenshots
+ * - Project title, GitHub link, live site link, and copy-link button
+ * - Overview, feature list, and technologies tags
+ *
+ * @returns {JSX.Element} Fully styled project page for the CART project.
+ */
+
 export function JsFrameworksPage() {
   const images = [CartImage1, CartImage2, CartImage3, CartImage4];
 

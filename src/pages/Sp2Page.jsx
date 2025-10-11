@@ -4,6 +4,18 @@ import ReuzeImage3 from '../assets/reuzeCategories.png';
 import ReuzeImage4 from '../assets/reuzeViewItem.png';
 import ProjectPage from '../components/ProjectPage';
 
+/**
+ * Sp2Page component
+ *
+ * Wrapper page for the Semester Project 2 (ReUze).
+ * Uses ProjectPage to render:
+ * - Image gallery of project screenshots
+ * - Project title, GitHub link, live site link, and copy-link button
+ * - Overview, feature list, and technologies tags
+ *
+ * @returns {JSX.Element} Fully styled project page for the ReUze project.
+ */
+
 export function Sp2Page() {
   return (
     <ProjectPage

@@ -2,6 +2,18 @@ import { useState } from 'react';
 import { FaShareAlt } from 'react-icons/fa';
 import Toast from './Toast';
 
+/**
+ * CopyLinkButton component
+ *
+ * Renders a share icon button that copies a hash-link to the clipboard
+ * when clicked. Also shows a temporary toast notification when copied.
+ *
+ * Props:
+ * @param {Object} props
+ * @param {string} props.projectHash - Short identifier used to build the hash-link (e.g. "CART", "BLUB").
+ *
+ * @returns {JSX.Element} A button with copy-to-clipboard functionality and toast feedback.
+ */
 export default function CopyLinkButton({ projectHash }) {
   const [copied, setCopied] = useState(false);
 

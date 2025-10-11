@@ -4,6 +4,14 @@ import BlubImage from '../assets/blubScreenshot.png';
 import CartImage from '../assets/cartScreenshot.png';
 import ReuzeImage from '../assets/reuzeScreenshot.png';
 
+/**
+ * HomePage component
+ *
+ * Displays the portfolio homepage with a hero section and a grid of highlighted projects.
+ * Each project card includes an image, title, description, technologies, and a link to its project page.
+ *
+ * @returns {JSX.Element} The homepage section containing hero image and project highlights.
+ */
 export function HomePage() {
   const projects = [
     {

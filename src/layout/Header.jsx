@@ -3,6 +3,21 @@ import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaHome } from 'react-icons/fa';
 import LogoHeader from '../assets/portfolioLogoDark.png';
 
+/**
+ * Header component
+ *
+ * Responsive navigation header for the portfolio site.
+ * - Shows logo and navigation links
+ * - Desktop: horizontal nav
+ * - Mobile: collapsible menu with toggle button
+ *
+ * State:
+ * @param {boolean} isMobileOpen - Tracks whether the mobile menu is open
+ *
+ * Navigation items are defined internally.
+ *
+ * @returns {JSX.Element} The responsive site header.
+ */
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 

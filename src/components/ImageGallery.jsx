@@ -1,22 +1,23 @@
 import { useState, useEffect } from 'react';
 
 /**
- * ImageGallery Component
+ * ImageGallery component
  *
- * - Large image on top
- * - Small horizontal thumbnails below, centered
- *
- * Responsive thumbnail sizes:
+ * Displays a large main image with horizontal thumbnails below.
+ * Thumbnails are responsive based on screen width:
  * - thumbHeight (desktop)
  * - thumbHeightSm (small screens < 640px)
- * - thumbHeightXs (extra small < 480px)
+ * - thumbHeightXs (extra small screens < 480px)
  *
  * Props:
- * - images: array of image URLs (required)
- * - mainHeight: max height (px) for main image (default 400)
- * - thumbHeight: desktop thumb size px (default 80)
- * - thumbHeightSm: thumb size for small screens px (default 64)
- * - thumbHeightXs: thumb size for extra small screens px (default 48)
+ * @param {Object} props
+ * @param {string[]} props.images - Array of image URLs (required)
+ * @param {number} [props.mainHeight=400] - Max height for main image in px
+ * @param {number} [props.thumbHeight=80] - Thumbnail height for desktop in px
+ * @param {number} [props.thumbHeightSm=64] - Thumbnail height for small screens (<640px)
+ * @param {number} [props.thumbHeightXs=48] - Thumbnail height for extra small screens (<480px)
+ *
+ * @returns {JSX.Element} Image gallery with responsive thumbnails
  */
 export default function ImageGallery({
   images,

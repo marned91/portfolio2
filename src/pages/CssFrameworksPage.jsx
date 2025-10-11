@@ -4,6 +4,17 @@ import BlubImage3 from '../assets/blubLogin.png';
 import BlubImage4 from '../assets/blubReadPost.png';
 import ProjectPage from '../components/ProjectPage';
 
+/**
+ * CssFrameworksPage component
+ *
+ * Wrapper page for the CSS Frameworks project (BLUB).
+ * Uses ProjectPage to render:
+ * - Image gallery of project screenshots
+ * - Project title, GitHub link, live site link, and copy-link button
+ * - Overview, feature list, and technologies tags
+ *
+ * @returns {JSX.Element} Fully styled project page for the BLUB project.
+ */
 export function CssFrameWorksPage() {
   const images = [BlubImage1, BlubImage2, BlubImage3, BlubImage4];
 
