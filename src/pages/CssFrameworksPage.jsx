@@ -11,7 +11,8 @@ export function CssFrameWorksPage() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href).then(() => {
+    const hashLink = `${window.location.origin}/#BLUB`;
+    navigator.clipboard.writeText(hashLink).then(() => {
       setCopied(true);
     });
   };

@@ -11,7 +11,8 @@ export function JsFrameworksPage() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href).then(() => {
+    const hashLink = `${window.location.origin}/#CART`;
+    navigator.clipboard.writeText(hashLink).then(() => {
       setCopied(true);
     });
   };
