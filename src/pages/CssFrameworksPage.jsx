@@ -4,7 +4,7 @@ import BlubImage2 from '../assets/blubFeed.png';
 import BlubImage3 from '../assets/blubLogin.png';
 import BlubImage4 from '../assets/blubReadPost.png';
 import { FaGithub, FaShareAlt, FaExternalLinkAlt } from 'react-icons/fa';
-import Toast from '../components/toast';
+import Toast from '../components/Toast';
 import ImageGallery from '../components/ImageGallery';
 
 export function CssFrameWorksPage() {

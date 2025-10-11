@@ -4,7 +4,7 @@ import ReuzeImage2 from '../assets/reuzeProfile.png';
 import ReuzeImage3 from '../assets/reuzeCategories.png';
 import ReuzeImage4 from '../assets/reuzeViewItem.png';
 import { FaGithub, FaShareAlt, FaExternalLinkAlt } from 'react-icons/fa';
-import Toast from '../components/toast';
+import Toast from '../componentsToast';
 import ImageGallery from '../components/ImageGallery';
 
 export function Sp2Page() {

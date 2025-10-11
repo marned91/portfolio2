@@ -4,8 +4,8 @@ import CartImage2 from '../assets/cartViewProduct.png';
 import CartImage3 from '../assets/cartCheckout.png';
 import CartImage4 from '../assets/cartCart.png';
 import { FaGithub, FaShareAlt, FaExternalLinkAlt } from 'react-icons/fa';
-import Toast from '../components/toast';
 import ImageGallery from '../components/ImageGallery';
+import Toast from '../components/Toast';
 
 export function JsFrameworksPage() {
   const [copied, setCopied] = useState(false);
