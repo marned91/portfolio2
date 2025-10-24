@@ -74,7 +74,7 @@ Start the development server with Vite:
 ```npm run preview```
 
 # Deployment
-The project is hosted on Netlify for live demo purposes. You can view the live version [here](https://reuze.netlify.app/).
+The project is hosted on Netlify for live demo purposes. You can view the live version [here](https://portfolio2-mn.netlify.app/).
 
 
 # Contributing
