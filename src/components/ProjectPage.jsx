@@ -2,30 +2,8 @@ import { useState } from 'react';
 import Toast from './Toast';
 import CopyLinkButton from './CopyLinkButton';
 import ImageGallery from './ImageGallery';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
-/**
- * ProjectPage component
- *
- * Reusable layout for individual project pages (BLUB, CART, ReUze).
- * Keeps the same structure and styling as your current pages:
- * - left column: ImageGallery
- * - right column: title, GitHub link, copy-link button, live site link
- * - overview, features list and technologies tags
- *
- * Props:
- * @param {Object} props
- * @param {string} props.title - Visible page title (e.g. "CSS Frameworks Project").
- * @param {string} props.githubLink - URL to the project's GitHub README or repository.
- * @param {string} props.liveLink - URL to the live demo site.
- * @param {string} props.projectHash - Short identifier used by CopyLinkButton to build a hash-link (e.g. "BLUB").
- * @param {Array<string|import('*.png')>} props.images - Array of image imports/URLs for the ImageGallery.
- * @param {string} props.overview - Short overview paragraph for the project.
- * @param {string[]} props.features - List of bullet-point features.
- * @param {string[]} props.technologies - Array of technology names to render as tags.
- *
- * @returns {JSX.Element} A fully styled project page section.
- */
 export default function ProjectPage({
   title,
   githubLink,
@@ -39,88 +17,43 @@ export default function ProjectPage({
   const [copied, setCopied] = useState(false);
 
   return (
-    <section className="bg-gradient-to-r from-gray-100 to-gray-400 py-5 md:py-10 w-full">
-      <div className="max-w-7xl mx-auto px-2 md:px-6">
-        <div className="bg-white p-4 md:p-10 rounded-xl shadow-lg grid lg:grid-cols-2 gap-8 items-start">
-          <div className="w-full max-w-[720px] mx-auto">
-            <ImageGallery
-              images={images}
-              mainHeight={350}
-              thumbHeight={80}
-              thumbHeightSm={64}
-              thumbHeightXs={48}
-            />
+    <section className="min-h-[70vh] bg-[#f3f5f0] px-4 py-8 md:px-8 md:py-14">
+      <div className="mx-auto max-w-7xl">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[.14em] text-[#668077]">Noroff · Study project</p>
+        <div className="grid items-start gap-8 rounded-3xl border border-[#dce4dd] bg-[#fbfcf8] p-4 shadow-[0_20px_60px_rgba(35,60,54,.08)] md:p-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-10">
+          <div className="min-w-0">
+            <ImageGallery images={images} mainHeight={520} thumbHeight={76} thumbHeightSm={64} thumbHeightXs={52} />
           </div>
-          <div className="flex flex-col gap-3 min-w-0">
-            <div className="flex flex-wrap md:flex-nowrap items-center gap-4">
-              <h1 className="text-2xl md:text-4xl font-bold text-main">
-                {title}
-              </h1>
-              <div className="flex gap-2 justify-center items-center">
-                <a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View project on GitHub"
-                  className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
-                >
-                  <FaGithub className="text-[20px]" />
-                </a>
-                <CopyLinkButton
-                  projectHash={projectHash}
-                  onCopy={() => setCopied(true)}
-                />
+          <div className="flex min-w-0 flex-col">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h1 className="m-0 font-large text-3xl font-semibold tracking-tight text-[#203c34] md:text-4xl">{title}</h1>
+              <div className="flex items-center gap-2">
+                <a href={githubLink} target="_blank" rel="noreferrer" aria-label="View project on GitHub" className="grid h-10 w-10 place-items-center rounded-full border border-[#dce4dd] text-[#355e51] transition hover:bg-[#edf3ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#578bcf]"><FaGithub aria-hidden="true" /></a>
+                <CopyLinkButton projectHash={projectHash} onCopy={() => setCopied(true)} />
               </div>
             </div>
-            <div className="flex items-center gap-1">
-              <FaExternalLinkAlt className="text-gray-600 text-[14px]" />
-              <a
-                href={liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 text-sm hover:text-gray-700 transition"
-              >
-                Open live site
-              </a>
-            </div>
-            <Toast
-              message="Link copied!"
-              show={copied}
-              onClose={() => setCopied(false)}
-            />
-            <div className="h-px bg-gray-300 w-full" />
-            <div className="space-y-5">
-              <div>
-                <h2 className="text-xl font-semibold text-dark mb-2">
-                  Overview
-                </h2>
-                <p className="text-gray-700 text-md">{overview}</p>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-dark mb-2">
-                  Features
-                </h2>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  {features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
+            <a href={liveLink} target="_blank" rel="noreferrer" className="mt-3 inline-flex w-fit items-center gap-2 text-sm font-medium text-[#53796a] no-underline hover:text-[#203c34]">
+              Open live project <FaArrowUpRightFromSquare aria-hidden="true" />
+            </a>
+            <Toast message="Link copied!" show={copied} onClose={() => setCopied(false)} />
+            <div className="my-6 h-px bg-[#dce4dd]" />
+            <div className="space-y-6">
+              <section aria-labelledby="overview-heading">
+                <h2 id="overview-heading" className="mb-2 font-buttons-nav text-base font-semibold text-[#203c34]">Overview</h2>
+                <p className="m-0 text-sm leading-7 text-[#5b6f66]">{overview}</p>
+              </section>
+              <section aria-labelledby="features-heading">
+                <h2 id="features-heading" className="mb-2 font-buttons-nav text-base font-semibold text-[#203c34]">Features</h2>
+                <ul className="m-0 list-disc space-y-2 pl-5 text-sm leading-6 text-[#5b6f66]">
+                  {features.map((feature) => <li key={feature}>{feature}</li>)}
                 </ul>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-dark mb-3">
-                  Technologies
-                </h2>
+              </section>
+              <section aria-labelledby="technologies-heading">
+                <h2 id="technologies-heading" className="mb-3 font-buttons-nav text-base font-semibold text-[#203c34]">Technologies</h2>
                 <div className="flex flex-wrap gap-2">
-                  {technologies.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-tags text-white rounded-full px-3 py-1 text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {technologies.map((technology) => <span key={technology} className="rounded-full border border-[#d9e3dc] bg-[#f1f6f1] px-3 py-1.5 text-xs text-[#416457]">{technology}</span>)}
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>

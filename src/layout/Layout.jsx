@@ -4,11 +4,9 @@ import Header from './Header';
 
 export function Layout() {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden w-screen">
+    <div id="top" className="flex min-h-screen w-full flex-col overflow-x-hidden bg-[#f8f8f4]">
       <Header />
-      <main className="flex-1">
-        <Outlet />
-      </main>
+      <main className="flex-1"><Outlet /></main>
       <Footer />
     </div>
   );
