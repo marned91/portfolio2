@@ -38,7 +38,7 @@ export function Sp2Page() {
         'Tailwind',
         'JavaScript',
         'Vite',
-        'API integration',
+        'Noroff API',
       ]}
     />
   );

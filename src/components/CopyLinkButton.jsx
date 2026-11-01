@@ -2,42 +2,27 @@ import { useState } from 'react';
 import { FaShareAlt } from 'react-icons/fa';
 import Toast from './Toast';
 
-/**
- * CopyLinkButton component
- *
- * Renders a share icon button that copies a hash-link to the clipboard
- * when clicked. Also shows a temporary toast notification when copied.
- *
- * Props:
- * @param {Object} props
- * @param {string} props.projectHash - Short identifier used to build the hash-link (e.g. "CART", "BLUB").
- *
- * @returns {JSX.Element} A button with copy-to-clipboard functionality and toast feedback.
- */
 export default function CopyLinkButton({ projectHash }) {
   const [copied, setCopied] = useState(false);
 
-  const handleCopyLink = () => {
-    const hashLink = `${window.location.origin}/#${projectHash}`;
-    navigator.clipboard.writeText(hashLink).then(() => {
-      setCopied(true);
-    });
+  const handleCopyLink = async () => {
+    const route = projectHash ? `/${projectHash}` : '/';
+    const hashLink = `${window.location.origin}/#${route}`;
+    await navigator.clipboard.writeText(hashLink);
+    setCopied(true);
   };
 
   return (
     <>
       <button
+        type="button"
         onClick={handleCopyLink}
         aria-label="Copy link to clipboard"
-        className="inline-flex items-center text-main transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/70 cursor-pointer"
+        className="grid h-10 w-10 place-items-center rounded-full border border-[#dce4dd] text-[#355e51] transition hover:bg-[#edf3ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#578bcf]"
       >
-        <FaShareAlt className="text-[20px]" />
+        <FaShareAlt aria-hidden="true" />
       </button>
-      <Toast
-        message="Link copied!"
-        show={copied}
-        onClose={() => setCopied(false)}
-      />
+      <Toast message="Link copied!" show={copied} onClose={() => setCopied(false)} />
     </>
   );
 }

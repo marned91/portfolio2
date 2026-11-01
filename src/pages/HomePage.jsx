@@ -1,33 +1,37 @@
 import { Link } from 'react-router-dom';
 import { FaArrowDown, FaArrowUpRightFromSquare, FaGithub, FaLinkedin } from 'react-icons/fa6';
-import BlubImage from '../assets/blubScreenshot.png';
 import CartImage from '../assets/cartScreenshot.png';
 import ReuzeImage from '../assets/reuzeScreenshot.png';
+import HolidazeImage from '../assets/holidaze-screenshot.jpg';
 
 const projects = [
   {
+    title: 'Holidaze',
+    image: HolidazeImage,
+    imageAlt: 'Holidaze booking app homepage with venue search and accommodation listings',
+    context: 'Noroff · Final exam',
+    description:
+      'A responsive accommodation booking app for guests and venue managers, with venue discovery, availability, bookings, and listing management.',
+    link: '/Holidaze',
+    technologies: ['React', 'TypeScript', 'Noroff API', 'React Hook Form'],
+  },
+  {
     title: 'CART',
     image: CartImage,
+    context: 'Noroff · Study project',
     description:
       'A responsive storefront built with React and TypeScript, with product discovery, cart state, and a complete checkout flow.',
     link: '/CART',
-    technologies: ['React', 'TypeScript', 'Zustand', 'API'],
+    technologies: ['React', 'TypeScript', 'Zustand', 'Noroff API'],
   },
   {
     title: 'ReUze',
     image: ReuzeImage,
+    context: 'Noroff · Study project',
     description:
       'An auction platform for second-hand goods, designed to make browsing, listing items, and placing bids straightforward.',
     link: '/ReUze',
-    technologies: ['JavaScript', 'Tailwind CSS', 'API'],
-  },
-  {
-    title: 'BLUB',
-    image: BlubImage,
-    description:
-      'A social application with profiles, post creation, and a searchable feed, rebuilt with a responsive interface.',
-    link: '/BLUB',
-    technologies: ['JavaScript', 'Tailwind CSS', 'API'],
+    technologies: ['JavaScript', 'Tailwind CSS', 'Noroff API'],
   },
 ];
 
@@ -38,9 +42,19 @@ const toolkit = [
   'Node.js',
   'HTML & CSS',
   'Tailwind CSS',
+  'Git',
+  'GitHub',
+  'GitHub Projects',
+  'GitHub Actions',
+  'Vite',
+  'Netlify',
+  'VS Code',
   'REST APIs',
+  'Jest',
   'Vitest',
   'Playwright',
+  'ESLint',
+  'Prettier',
 ];
 
 function scrollToSection(event, id) {
@@ -195,11 +209,11 @@ export function HomePage() {
           {projects.map((project, index) => (
             <Link to={project.link} key={project.title} className="project-card">
               <div className="project-image-wrap">
-                <img src={project.image} alt={`${project.title} project interface`} />
+                <img src={project.image} alt={project.imageAlt || `${project.title} project interface`} />
                 <span className="project-number">0{index + 1}</span>
               </div>
               <div className="project-card-content">
-                <p className="project-context">Noroff · Study project</p>
+                <p className="project-context">{project.context}</p>
                 <div className="project-title-row">
                   <h3>{project.title}</h3>
                   <FaArrowUpRightFromSquare aria-hidden="true" />
