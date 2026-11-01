@@ -41,7 +41,7 @@ export function JsFrameworksPage() {
         'Vite',
         'Tailwind',
         'Zustand',
-        'API integration',
+        'Noroff API',
       ]}
     />
   );
