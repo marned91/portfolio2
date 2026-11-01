@@ -24,6 +24,8 @@ A responsive accommodation booking application for guests and venue managers. Gu
 
 A responsive storefront with product discovery, cart state, and a checkout flow.
 
+![CART storefront showing products and shopping cart features](src/assets/cartScreenshot.png)
+
 - [Live project](https://cart-js-framework.netlify.app/)
 - [Source code](https://github.com/marned91/javascript-framework-ca)
 - Built with React, TypeScript, Zustand, Tailwind CSS, and the Noroff API.
@@ -31,6 +33,8 @@ A responsive storefront with product discovery, cart state, and a checkout flow.
 ### ReUze — Semester Project 2
 
 An auction platform for browsing and listing second-hand goods and placing bids.
+
+![ReUze auction platform screenshot](src/assets/reuzeScreenshot.png)
 
 - [Live project](https://reuze.netlify.app/)
 - [Source code](https://github.com/marned91/ReUze-SP2)
